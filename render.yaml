@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: susturano
+    runtime: go
+    buildCommand: go build -o bot main.go
+    startCommand: ./bot
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
